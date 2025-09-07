@@ -172,7 +172,7 @@ function App() {
   };
 
   return (
-    <div className="flex h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+    <div className="flex h-svh bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
       {/* LEFT: Chat history */}
       <div className="w-1/4 bg-gray-50 dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 p-4 overflow-y-auto flex flex-col">
         <div className="mb-4 flex flex-col md:flex-row gap-3 md:gap-0 items-center justify-between">
