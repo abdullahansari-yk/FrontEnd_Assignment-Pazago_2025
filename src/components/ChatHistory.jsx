@@ -59,7 +59,7 @@ const ChatHistory = ({
                           prev === chat.id ? null : chat.id
                         );
                       }}
-                      className="p-1 rounded hover:bg-gray-500"
+                      className="p-1 md:p-2 rounded hover:bg-gray-500"
                       aria-label="Chat options"
                     >
                       <svg
@@ -73,7 +73,8 @@ const ChatHistory = ({
                     </button>
 
                     {menuOpen === chat.id && (
-                      <div className="absolute right-2 top-10 w-40 bg-gray-500 border rounded shadow-lg z-20">
+                      <div className="absolute -right-20 md:right-2 top-10 w-40 bg-gray-500 border rounded shadow-lg z-20">
+                        {/* <div className="absolute left-auto md:right-2"> */}
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
@@ -82,7 +83,7 @@ const ChatHistory = ({
                               onRename(chat.id, newTitle.trim());
                             setMenuOpen(null);
                           }}
-                          className="w-full text-left px-3 py-2 hover:bg-gray-100"
+                          className="w-full  text-left px-3 py-2 hover:bg-gray-300"
                         >
                           Rename
                         </button>
@@ -93,11 +94,12 @@ const ChatHistory = ({
                             if (confirm("Delete this chat?")) onDelete(chat.id);
                             setMenuOpen(null);
                           }}
-                          className="w-full text-left px-3 py-2 hover:bg-gray-100 text-red-600"
+                          className="w-full text-left px-3 py-2 hover:bg-gray-300 text-red-600"
                         >
                           Delete
                         </button>
                       </div>
+                      // </div>
                     )}
                   </div>
                 )}

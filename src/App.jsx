@@ -223,7 +223,8 @@ function App() {
                     : "bg-gray-200 dark:bg-gray-700 dark:text-gray-100 rounded-bl-none"
                 }`}
               >
-                <ReactMarkdown>{msg.text}</ReactMarkdown>
+                {/* <ReactMarkdown>{msg.text}</ReactMarkdown> */}
+                <ReactMarkdown>{msg.text.replace(/\\n/g, "\n")}</ReactMarkdown>
               </div>
             </div>
           ))}
