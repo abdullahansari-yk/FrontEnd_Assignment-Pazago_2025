@@ -12,7 +12,7 @@ const ChatHistory = ({
   const [menuOpen, setMenuOpen] = useState(null);
 
   return (
-    <div>
+    <div >
       <div className="flex justify-between items-center mb-3">
         <h2 className="text-xl font-bold mb-3">Chats</h2>
       </div>
